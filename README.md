@@ -1,5 +1,5 @@
 # sprite_maker
-Make .sprite files from PNG images.
+Make .sprite files from PNG images. You can use these sprites with the [pixel](github.com/actuday6418/pixel) game utility. Head over there for a detailed explanation of the sprite format.
 
 # Dependencies
 1. [Rust](https://www.rust-lang.org/tools/install)
