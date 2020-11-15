@@ -1,8 +1,15 @@
 # sprite_maker
 Make .sprite files from PNG images.
 
-# Building
+# Dependencies
+1. [Rust](https://www.rust-lang.org/tools/install)
+2. [Python3](https://www.python.org/downloads/)
+3. [Tkdnd](https://github.com/pmgagne/tkinterdnd2)
 
+# Source code
+The backend (image transforms and file handling) is done by a dynamic library written in Rust. An extension for Tkinter is used as the frontend.
+
+# Building
 1. ui.py has an external dependency that first has to be met.
 ```
    cd frontend
@@ -15,14 +22,12 @@ Make .sprite files from PNG images.
 ```
 
 # Running
-
 Execute sprite_maker. It's a one line script!
 ```
     ./sprite_maker
 ```
 
 # Usage
-
 Sorry about the low quality and artifacts in the screen recording.
 
 Generating the .sprite file -
