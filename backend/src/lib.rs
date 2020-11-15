@@ -35,7 +35,7 @@ fn edit(_py: Python, file_dir: &str, xdim: &str, ydim: &str) -> PyResult<i32>{
 
     let img = img.as_mut_rgba8().unwrap();
 
-    let mut file = File::create("glass.sprite").expect("Couldn't create that file");
+    let mut file = File::create("output.sprite").expect("Couldn't create that file");
     file.write(as_u8_slice(&dimensions)).unwrap();
 
     let mut ivec = Vec::new();

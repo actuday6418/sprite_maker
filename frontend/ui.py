@@ -41,7 +41,7 @@ label = tkinter.Label(text="Drop the input PNG here")
 label.grid(row=0, column=0, padx=(30, 30), pady=(50, 10))
 
 entry_sv = tkinter.StringVar()
-entry = tkinter.Entry(root, textvar=entry_sv, width=80)
+entry = tkinter.Entry(root, textvar=entry_sv, width=40)
 entry.grid(row=0, column=1, padx=(30, 30), pady=(50, 10))
 entry.drop_target_register(DND_FILES)
 entry.dnd_bind('<<Drop>>', drop)
@@ -50,17 +50,17 @@ labelx = tkinter.Label(text="Enter X dimension")
 labelx.grid(row=1, column=0, padx=(30,30), pady=(10,10))
 
 entry_xdim = tkinter.StringVar()
-entryx = tkinter.Entry(root, textvar=entry_xdim, width=80)
+entryx = tkinter.Entry(root, textvar=entry_xdim, width=40)
 entryx.grid(row=1, column=1, padx=(30,30), pady=(10,10))
 
 labely = tkinter.Label(text="Enter Y dimension")
 labely.grid(row=2, column=0, padx=(30,30), pady=(10,10))
 
 entry_ydim = tkinter.StringVar()
-entryy = tkinter.Entry(root, textvar=entry_ydim, width=80)
+entryy = tkinter.Entry(root, textvar=entry_ydim, width=40)
 entryy.grid(row=2, column=1, padx=(30,30), pady=(10,10))
 
 load = tkinter.Button(text="Convert Image", command=doConvert)
-load.grid(row=3, column=1)
+load.grid(row=3, column=1, padx=(30,30), pady=(10,50))
 
 root.mainloop()
