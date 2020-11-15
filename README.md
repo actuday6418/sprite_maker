@@ -26,7 +26,7 @@ Execute sprite_maker. It's a one line script!
 Sorry about the low quality and artifacts in the screen recording.
 
 Generating the .sprite file -
-![op](https://user-images.githubusercontent.com/56124831/99193554-c7c82c80-279f-11eb-9ff8-a4b14ed8c62d.gif)
+![shot](https://user-images.githubusercontent.com/56124831/99193560-cc8ce080-279f-11eb-968f-eac348aeb787.gif)
 
 Using the file in your app (This looks mush better than the recording makes it out to be. Github will only host so much.) - 
-![shot](https://user-images.githubusercontent.com/56124831/99193560-cc8ce080-279f-11eb-968f-eac348aeb787.gif)
+![op](https://user-images.githubusercontent.com/56124831/99193554-c7c82c80-279f-11eb-9ff8-a4b14ed8c62d.gif)
