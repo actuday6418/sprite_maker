@@ -1,7 +1,18 @@
+
+extern crate cpython;
+
+use cpython::{PyResult, Python, py_module_initializer, py_fn};
+
 extern crate image;
 
 use std::fs::File;
 use std::io::prelude::*;
+
+py_module_initializer!(libedit, |py, m| {
+    m.add(py, "__doc__", "This module is implemented in Rust.")?;
+    m.add(py, "edit", py_fn!(py, edit(val: &str, xdim: &str, ydim: &str)))?;
+    Ok(())
+});
 
 fn as_u8_slice(v: &[i32]) -> &[u8] {
     unsafe {
@@ -12,11 +23,13 @@ fn as_u8_slice(v: &[i32]) -> &[u8] {
     }
 }
 
-#[no_mangle]
-pub extern "C" fn edit() {
-    let dimensions = vec![50 as i32, 50 as i32];
+fn edit(_py: Python, file_dir: &str, xdim: &str, ydim: &str) -> PyResult<i32>{
 
-    let img = image::open("glass.png").expect("Image loading failed!");
+    let mut dimensions = vec![];
+    dimensions.push(xdim.parse::<i32>().expect("X dimension was not an integer!"));
+    dimensions.push(ydim.parse::<i32>().expect("Y dimension was not an integer!"));
+
+    let img = image::open(file_dir).expect("Image loading failed!");
 
     let mut img = img.thumbnail(dimensions[0] as u32, dimensions[1] as u32);
 
@@ -38,5 +51,6 @@ pub extern "C" fn edit() {
         ivec.push(avg as u8);
     }
 
-    file.write(&ivec[..]).unwrap();
+    file.write(&ivec[..]).expect("unable to write to file!");
+    Ok(1)
 }
