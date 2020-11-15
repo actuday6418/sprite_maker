@@ -1,0 +1,12 @@
+[package]
+name = "backend"
+version = "0.1.0"
+authors = ["actuday6418@gmail.com"]
+edition = "2018"
+
+[lib]
+name = "edit"
+crate-type = ["cdylib"]
+
+[dependencies]
+image = "0.23.11"
