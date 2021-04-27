@@ -28,7 +28,7 @@ Execute sprite_maker. It's a one line script!
 ```
 
 # Usage
-Sorry about the low quality and artifacts in the screen recording.
+I solemnly acknowledge the low quality and artifacts in the screen recording.
 
 Generating the .sprite file -
 ![shot](https://user-images.githubusercontent.com/56124831/99193560-cc8ce080-279f-11eb-968f-eac348aeb787.gif)
